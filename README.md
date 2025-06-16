@@ -451,3 +451,31 @@ In conclusion, the confusion matrix shows a model that achieved perfect classifi
 
 - Continue tracking temporal patterns in signal and throughput to anticipate demand and preemptively manage resources.
 
+# Deploying the Models using Streamlit
+
+## Signal Strength Prediction
+
+![app - Google Chrome 6_16_2025 3_55_08 PM](https://github.com/user-attachments/assets/9a3e5f69-a35e-44f7-b539-bdedfa050ec9)
+
+
+
+![app - Google Chrome 6_16_2025 3_55_27 PM](https://github.com/user-attachments/assets/face742f-72a7-4286-ae29-3f98b8190889)
+
+## Throughout Prediction
+
+![app - Google Chrome 6_16_2025 4_05_23 PM](https://github.com/user-attachments/assets/18fe8ff9-8288-4aa0-99bd-fa6897cefdfa)
+
+
+![throughput - Google Chrome 6_16_2025 4_05_44 PM](https://github.com/user-attachments/assets/ef1717fa-60d4-475d-b638-b9dc7de18e9c)
+
+
+## Network Type Prediction
+
+![network - Google Chrome 6_16_2025 4_17_43 PM](https://github.com/user-attachments/assets/2d84d372-efc3-44e4-be40-69297197e481)
+
+
+![network - Google Chrome 6_16_2025 4_18_00 PM](https://github.com/user-attachments/assets/efbbc45e-962a-4711-bb55-f4d295df2c7e)
+
+
+
+
