@@ -22,30 +22,6 @@ Mobile network operators face challenges in ensuring consistent service quality 
 
 1. **Regression**:
    - Predict continuous performance metrics:
-  #  Cellular Network Performance Modeling Project
-
-##  Overview
-
-In the telecommunications industry, maintaining high-quality cellular network performance is critical for customer satisfaction, retention, and operational efficiency. This project uses a real-world dataset containing geolocated signal measurements and network performance metrics to analyze and model key indicators of network health. By combining regression and classification approaches, the aim is to evaluate and predict network performance and classify zones based on service quality.
-
----
-
-## Problem Statement
-
-Mobile network operators face challenges in ensuring consistent service quality across regions. Variability in signal strength, data throughput, and latency can result in user dissatisfaction, especially in high-traffic or underserved areas. There is a need to:
-
-- Accurately predict network performance metrics at any given location and time.
-- Identify and classify zones by quality of service.
-- Predict the network type (3G, 4G, 5G, etc.) based on environmental and signal parameters.
-
----
-
-##  Project Objectives
-
-### Primary Objectives
-
-1. **Regression**:
-   - Predict continuous performance metrics:
      - Signal Strength (dBm)
      - Data Throughput (Mbps)
      
