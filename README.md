@@ -26,6 +26,16 @@ This project uses machine learning to address these challenges.
 
 ---
 
+## 🧠 Machine Learning Workflow
+- Data cleaning & preprocessing  
+- Exploratory Data Analysis (EDA)  
+- Feature engineering  
+- Model training with multiple algorithms  
+- Evaluation and comparison  
+- Selection of the best performing models  
+
+---
+
 ## 📊 Dataset Overview
 
 **Dataset Source:** Real cellular network measurement data.  
