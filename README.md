@@ -215,6 +215,13 @@ bash
 
 ![network - Google Chrome 6_16_2025 4_18_00 PM](https://github.com/user-attachments/assets/efbbc45e-962a-4711-bb55-f4d295df2c7e)
 
+---
+
+## Licenses
+
+![License](https://img.shields.io/github/license/kennethnyangweso/Cellular-Network-Analysis-with-Machine-Learning)
+![Stars](https://img.shields.io/github/stars/kennethnyangweso/Cellular-Network-Analysis-with-Machine-Learning)
+
 
 
 
