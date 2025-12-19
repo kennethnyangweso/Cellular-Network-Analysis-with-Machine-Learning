@@ -224,6 +224,11 @@ bash
 ![License](https://img.shields.io/github/license/kennethnyangweso/Cellular-Network-Analysis-with-Machine-Learning)
 ![Stars](https://img.shields.io/github/stars/kennethnyangweso/Cellular-Network-Analysis-with-Machine-Learning)
 
+## **👤 Author**
+
+**Kenneth Nyangweso**
+
+**Data Scientist | Electrical & Telecommunications Engineer**
 
 
 
