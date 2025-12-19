@@ -156,6 +156,8 @@ Predict **network type** (3G, 4G, 5G) from environmental and signal features.
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter&logoColor=white)
+
 
 ### 📊 Data Visualization
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
