@@ -150,9 +150,22 @@ Predict **network type** (3G, 4G, 5G) from environmental and signal features.
 2. Near-Perfect Alignment points closely follow the 45° diagonal, confirming the model’s exceptional accuracy (R² ≈ 0.9995).
 3. The confusion matrix shows a model that achieved perfect classification across all four classes (LTE, 4G, 3G, 5G). 
 
-
-
 ---
+## 🛠️ Tech Stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+
+### 📊 Data Visualization
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
+![Seaborn](https://img.shields.io/badge/Seaborn-4B8BBE?style=for-the-badge)
+
+### 🚀 ML App Deployment
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+---
+
+
 
 ## 📦 Installation
 
