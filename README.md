@@ -1,4 +1,14 @@
 # 📡 Cellular Network Performance Analysis
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-006699?logo=plotly&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Plots-2E8B57)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?logo=scikitlearn&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-FF4B4B?logo=streamlit&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)
+![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)
+
 
 This project uses real-world cellular network data to **analyze, model, and predict key network performance metrics** using machine learning. It focuses on regression tasks for network performance (**signal strength and throughput**) and classification for **network type** (3G, 4G, 5G, etc.) based on environmental and signal parameters.  
 
