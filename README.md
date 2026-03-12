@@ -1,4 +1,5 @@
-# 📡 Cellular Network Performance Analysis
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/d416e02d-7b92-44a5-80c5-ad7a7488ef89" />
+
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy&logoColor=white)
