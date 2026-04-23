@@ -172,13 +172,17 @@ Predict **network type** (3G, 4G, 5G) from environmental and signal features.
 - The performance gap between all models is minimal, indicating that the dataset is well-structured and separable.
 👉 Conclusion: While all models perform well, Random Forest offers the best balance between accuracy and consistency for network type classification.
 
-## 📈 Visuals and Confusion Matrix For Best 
+## 📈 Visuals and Confusion Matrix For Best
+
+**Residual Plot**
 
 <img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/7de856c5-93df-403d-a337-73af643d75eb" />
 
+**Confusion Matrix**
 
 <img width="656" height="550" alt="image" src="https://github.com/user-attachments/assets/cb627c9d-7b59-4fa5-8e70-b5e3745e8e0e" />
 
+** Feature Importance Graph**
 
 <img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/480aec70-dec5-4f9e-b179-4710cd339afe" />
 
@@ -189,7 +193,32 @@ Predict **network type** (3G, 4G, 5G) from environmental and signal features.
 3. Weighted Accuracy for LTE: The model is much more successful at identifying LTE (726 correct) than 5G (568 correct). It seems the tuning pushed the model to be more confident in its LTE predictions.
 4. Shift to Throughput: Unlike the single Decision Tree (which ignored it), the Random Forest identified data_throughput_(mbps) as the #1 most important feature (~45%). This is likely what helped it achieve that record 88.2% accuracy, as 5G and LTE throughput differ significantly.
 5.  A More Balanced Trio: The model relies on a powerful combination of Throughput, Latency, and Signal Strength. By using all three, it’s much harder for a signal to "hide" its true identity than if the model just looked at latency alone.
+
+## Conclusions
+
+1. Regression (dBm Prediction):
+   - The Tuned Random Forest Regressor is your "Gold Standard" ( R-Squared: 0.89, MAE: 1.25). It is exceptionally stable and handles the "noisy" nature of  RF signals better than sequential models like XGBoost.
+   - The -85 dBm "Spike" in the residuals indicates a model bias or a data limitation at that specific threshold. The model tends to default to this value when the input features are ambiguous.
+
+2. Classification (Network Type):
+   - Legacy Perfection: All models achieved 100% accuracy for 3G and 4G, primarily driven by distinct Latency signatures.
+   - The Modern Conflict: The primary challenge is the overlap between LTE and 5G. While the Tuned Random Forest has the highest overall accuracy (88.2%), the Tuned XGBoost is technically superior at identifying actual 5G signals (614 correct vs. 568).
+   - Key Drivers: Data Throughput and Latency are the only features that truly matter for classification. Geographic and temporal data are currently "dead weight" in your dataset.
+
+## Recommendations
+
+1. Selection of Final Models
+  - For Accuracy: Deploy the Tuned Random Forest for both tasks. It provides the most consistent performance and the lowest error variance.
+  - For 5G Sensitivity: If your priority is specifically identifying 5G users (even at the cost of slight overall accuracy), use the Tuned XGBoost Classifier, as it captured the highest volume of 5G signals.
+2. Feature Engineering & Data Collection
+  - Break the LTE/5G Tie: To push past the 88% accuracy ceiling, you need features that strictly separate LTE from 5G. I recommend adding Frequency Band (ARFCN), Channel Bandwidth, or MIMO layers.
+  - Prune the Dataset: Since latitude, longitude, and all time variables have zero importance, you can remove them from your production pipeline. This will reduce data storage needs and speed up inference without hurting accuracy.
+3. Addressing the -85 dBm Bias
+  - Investigate the data source for the -85 dBm cluster. If this is a hardware "reporting limit" or a default value for a specific sensor, consider oversampling signals in the -90 to -80 dBm range to give the model more granular patterns to learn.
+4. Deployment Strategy
+  - Since your models rely on only three features (Throughput, Latency, Strength), they are lightweight enough to run on edge devices or mobile handsets for real-time network switching logic.
 ---
+
 ## 🛠️ Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
