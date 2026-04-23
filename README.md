@@ -19,7 +19,7 @@ This project uses real-world cellular network data to **analyze, model, and pred
 
 The main objectives of this project are:  
 
-1. Predict **signal strength and throughput** using regression models.  
+1. Predict **signal strength** using regression models.  
 2. **Classify network type** (3G, 4G, 5G, etc.) using machine learning classification models.  
 3. Analyze the impact of measurement tools, environmental factors, and signal parameters on network performance.  
 
@@ -99,32 +99,38 @@ This project uses machine learning to address these challenges.
 ### 🔹 Regression Models
 Predict continuous performance metrics:  
 - Signal strength  
-- Throughput  
+
  
 
 **Algorithms used:**  
-- Linear Regression  
+- Decision Tree Regressor 
 - Random Forest Regressor  
-- XGBoost Regressor  
+- XGBoost Regressor
+- Hyperparameter Tuning
+- GridSearch CV
+
+
 
 **Evaluation Metrics:**  
-- RMSE (Root Mean Squared Error)  
+- MSE (Root Mean Squared Error)  
 - MAE (Mean Absolute Error)  
 - R² Score  
 
 ### 🔹 Classification Models
 Predict **network type** (3G, 4G, 5G) from environmental and signal features.  
 
-**Algorithms used:**  
-- Random Forest  
-- XGBoost  
+**Algorithms used:** 
+- Decision Tree Classifier
+- Random Forest  Classifier
+- XGBoost  Classifier 
+- Hyperparameter Tuning
+- GridSearch CV
  
 
 **Evaluation Metrics:**  
-- Accuracy  
-- Precision  
-- Recall  
-- F1-Score  
+- Accuracy
+- F1-Score
+- Classification Report
 
 ---
 
@@ -132,24 +138,25 @@ Predict **network type** (3G, 4G, 5G) from environmental and signal features.
 
 ### Regression
 
-### Signal Strength best Model ( XGBoost Regressor)
+### Signal Strength 
 
-### Throughput best Model ( XGBoost Regressor )
 
-| Metric | Signal Strength | Throughput |
-|--------|----------------|------------|
-| RMSE   |  1.74           |  0.08        | 
-| MAE    |  1.21           |  0.03        | 
-| R²     |  0.89           |  0.99        |  
 
-### Classification ( Best Model Random Forest Classifier )
+| Metric | Decision Tree |  **Random Forest** | XGBoost |
+|--------|----------------|-------------------|---------|
+| MAE (dBm)  |  1.34      |  **1.25**       | 1.27
+| MSE (dBm)   |  3.40     |  **3.11**        | 3.17
+| R² (%)    |  87.96      |  **88.98**      |  88.78
 
-| Metric  | Network Type |
-|---------|--------------|
-| Accuracy| 0.99          |
-| Precision| 0.99          |
-| Recall | 0.99           |
-| F1-Score| 0.99          |
+### Classification 
+
+### Network Type 
+
+| Metric  | Decision Tree | **Random Forest** | XGBoost       |
+|---------|--------------|--------------------|---------------|
+| Accuracy(%)| 87.73      |        **88.24**     |   88.11   |
+| F1-Score (%)| 88.24     |     **88.13**       |     88.10   |
+
 
 ### **Key Insights**
 
