@@ -144,9 +144,9 @@ Predict **network type** (3G, 4G, 5G) from environmental and signal features.
 
 | Metric | Decision Tree |  **Random Forest** | XGBoost |
 |--------|----------------|-------------------|---------|
-| MAE (dBm)  |  1.34      |  **1.25**       | 1.27
-| MSE (dBm)   |  3.40     |  **3.11**        | 3.17
-| R² (%)    |  87.96      |  **88.98**      |  88.78
+| MAE (dBm)  |  1.34      |  **1.25**       | 1.27      |
+| MSE (dBm)   |  3.40     |  **3.11**        | 3.17     |
+| R² (%)    |  87.96      |  **88.98**      |  88.78    |
 
 ### Classification 
 
@@ -154,30 +154,39 @@ Predict **network type** (3G, 4G, 5G) from environmental and signal features.
 
 | Metric  | Decision Tree | **Random Forest** | XGBoost       |
 |---------|--------------|--------------------|---------------|
-| Accuracy(%)| 87.73      |        **88.24**     |   88.11   |
+| Accuracy(%)| 87.73      |        **88.24**     |   88.11    |
 | F1-Score (%)| 88.24     |     **88.13**       |     88.10   |
 
 
-### **Key Insights**
+### 📊 Regression Insights – Signal Strength
+- The Random Forest Regressor achieved the best overall performance, with the lowest MAE (1.25 dBm) and MSE (3.11), indicating more accurate and consistent predictions.
+- It also recorded the highest R² score (88.98%), meaning it explains slightly more variance in signal strength compared to the other models.
+- XGBoost performed very closely to Random Forest, making it a strong alternative, especially in scenarios where boosting may generalize better.
+- The Decision Tree model showed slightly lower performance, likely due to overfitting and limited generalization capability.
+👉 Conclusion: Random Forest is the most reliable model for signal strength prediction in this project.
 
-- The regression models perform very well, with low errors and high R² values
-- The Random Forest Classifier for network type achieved excellent performance across all metrics (Accuracy, Precision, Recall, F1-Score = 0.99), demonstrating that environmental and signal parameters are highly predictive of the network type.
-- Overall, the models are robust and reliable for both regression and classification tasks, supporting effective network performance analysis and prediction.
+### 📡 Classification Insights – Network Type
+- The Random Forest Classifier achieved the highest accuracy (88.24%), indicating the best overall classification performance.
+- Interestingly, the Decision Tree recorded the highest F1-score (88.24%), suggesting a slightly better balance between precision and recall for certain classes.
+- XGBoost performed almost identically to Random Forest, confirming strong and stable classification capability across ensemble methods.
+- The performance gap between all models is minimal, indicating that the dataset is well-structured and separable.
+👉 Conclusion: While all models perform well, Random Forest offers the best balance between accuracy and consistency for network type classification.
 
-## 📈 Visuals and Confusion Matrix
+## 📈 Visuals and Confusion Matrix For Best 
 
-<img width="784" height="584" alt="image" src="https://github.com/user-attachments/assets/3c0e446b-392b-49d2-bdb4-b28950d9ad73" />
+<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/7de856c5-93df-403d-a337-73af643d75eb" />
 
-<img width="784" height="584" alt="image" src="https://github.com/user-attachments/assets/1dfbe8c3-a0d2-4b05-89fb-78f5b8210f18" />
+<img width="656" height="550" alt="image" src="https://github.com/user-attachments/assets/cb627c9d-7b59-4fa5-8e70-b5e3745e8e0e" />
 
-<img width="531" height="437" alt="image" src="https://github.com/user-attachments/assets/b4642f62-b5b3-4f0c-900c-bc221da2dfe6" />
+<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/480aec70-dec5-4f9e-b179-4710cd339afe" />
 
 ### **Key Observations**
 
-1. Excellent Fit  points cluster tightly around the 45° line, confirming the high R² (0.8926).
-2. Near-Perfect Alignment points closely follow the 45° diagonal, confirming the model’s exceptional accuracy (R² ≈ 0.9995).
-3. The confusion matrix shows a model that achieved perfect classification across all four classes (LTE, 4G, 3G, 5G). 
-
+1.  Overall Good Fit: Most points are clustered tightly around the horizontal zero line, which confirms why your r-squared is so high (~0.89). For most of the signal range, the model is unbiased.
+2.  Dominant Performance on Legacy Networks: The model remains perfect (100%) for 3G and 4G, showing zero confusion between older tech and modern LTE/5G signals.
+3. Weighted Accuracy for LTE: The model is much more successful at identifying LTE (726 correct) than 5G (568 correct). It seems the tuning pushed the model to be more confident in its LTE predictions.
+4. Shift to Throughput: Unlike the single Decision Tree (which ignored it), the Random Forest identified data_throughput_(mbps) as the #1 most important feature (~45%). This is likely what helped it achieve that record 88.2% accuracy, as 5G and LTE throughput differ significantly.
+5.  A More Balanced Trio: The model relies on a powerful combination of Throughput, Latency, and Signal Strength. By using all three, it’s much harder for a signal to "hide" its true identity than if the model just looked at latency alone.
 ---
 ## 🛠️ Tech Stack
 
