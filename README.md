@@ -254,36 +254,27 @@ bash
 
 🧠 Run Analysis Notebook
 
-    jupyter notebook notebooks/Cellular_Network_Analysis.ipynb
+    jupyter notebook notebooks/Cellular Network Notebook.ipynb
 
 🌐 Run Streamlit Deployment App
 
-    streamlit run app.py
+    streamlit run signal_app.py
+    streamlit run network_type_app.py
 
 ## **Expected Results**
 
 ### Signal Strength Prediction
 
-![app - Google Chrome 6_16_2025 3_55_08 PM](https://github.com/user-attachments/assets/9a3e5f69-a35e-44f7-b539-bdedfa050ec9)
+<img width="1366" height="768" alt="Screenshot (57)" src="https://github.com/user-attachments/assets/dac92143-3239-4d60-8c17-24a67259d591" />
 
-
-
-![app - Google Chrome 6_16_2025 3_55_27 PM](https://github.com/user-attachments/assets/face742f-72a7-4286-ae29-3f98b8190889)
-
-### Throughout Prediction
-
-![app - Google Chrome 6_16_2025 4_05_23 PM](https://github.com/user-attachments/assets/18fe8ff9-8288-4aa0-99bd-fa6897cefdfa)
-
-
-![throughput - Google Chrome 6_16_2025 4_05_44 PM](https://github.com/user-attachments/assets/ef1717fa-60d4-475d-b638-b9dc7de18e9c)
+<img width="1366" height="768" alt="Screenshot (58)" src="https://github.com/user-attachments/assets/3ca6a03d-bc25-4b1b-958c-7b8119b78a32" />
 
 
 ### Network Type Prediction
 
-![network - Google Chrome 6_16_2025 4_17_43 PM](https://github.com/user-attachments/assets/2d84d372-efc3-44e4-be40-69297197e481)
+<img width="1366" height="768" alt="Screenshot (54)" src="https://github.com/user-attachments/assets/674ffaa4-8551-47fc-9097-a3ab99fb4822" />
 
-
-![network - Google Chrome 6_16_2025 4_18_00 PM](https://github.com/user-attachments/assets/efbbc45e-962a-4711-bb55-f4d295df2c7e)
+<img width="1366" height="768" alt="Screenshot (55)" src="https://github.com/user-attachments/assets/c1f41e78-907c-4272-8254-46a30b15cd28" />
 
 ---
 
