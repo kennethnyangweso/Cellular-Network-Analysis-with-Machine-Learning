@@ -182,7 +182,7 @@ Predict **network type** (3G, 4G, 5G) from environmental and signal features.
 
 <img width="656" height="550" alt="image" src="https://github.com/user-attachments/assets/cb627c9d-7b59-4fa5-8e70-b5e3745e8e0e" />
 
-** Feature Importance Graph**
+**Feature Importance Graph**
 
 <img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/480aec70-dec5-4f9e-b179-4710cd339afe" />
 
