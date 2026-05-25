@@ -163,6 +163,7 @@ Predict **network type** (3G, 4G, 5G) from environmental and signal features.
 - It also recorded the highest R² score (88.98%), meaning it explains slightly more variance in signal strength compared to the other models.
 - XGBoost performed very closely to Random Forest, making it a strong alternative, especially in scenarios where boosting may generalize better.
 - The Decision Tree model showed slightly lower performance, likely due to overfitting and limited generalization capability.
+
 👉 Conclusion: Random Forest is the most reliable model for signal strength prediction in this project.
 
 ### 📡 Classification Insights – Network Type
@@ -170,6 +171,7 @@ Predict **network type** (3G, 4G, 5G) from environmental and signal features.
 - Interestingly, the Decision Tree recorded the highest F1-score (88.24%), suggesting a slightly better balance between precision and recall for certain classes.
 - XGBoost performed almost identically to Random Forest, confirming strong and stable classification capability across ensemble methods.
 - The performance gap between all models is minimal, indicating that the dataset is well-structured and separable.
+
 👉 Conclusion: While all models perform well, Random Forest offers the best balance between accuracy and consistency for network type classification.
 
 ## 📈 Visuals and Confusion Matrix For Best
